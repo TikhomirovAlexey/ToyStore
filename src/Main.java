@@ -2,16 +2,40 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        ShelfToys lego = new ShelfToys("Lego");
+        lego.addToy(new Toy("101", "lego", "OOO Toys"));
+        lego.addToy(new Toy("102", "lego", "OOO Toys"));
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        ShelfToys robots = new ShelfToys("Robots");
+        robots.addToy(new Toy("201", "robot Bob", "OOO Robots"));
+        robots.addToy(new Toy("202", "robot Bob", "OOO Robots"));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        ShelfToys dolls = new ShelfToys("Dolls");
+        dolls.addToy(new Toy("301", "doll Barby", "OOO Dolls"));
+        dolls.addToy(new Toy("302", "doll Barby", "OOO Dolls"));
+        dolls.addToy(new Toy("303", "doll Barby", "OOO Dolls"));
+        dolls.addToy(new Toy("304", "doll Barby", "OOO Dolls"));
+        dolls.addToy(new Toy("305", "doll Barby", "OOO Dolls"));
+        dolls.addToy(new Toy("306", "doll Barby", "OOO Dolls"));
+
+        Shop shop = new Shop();
+        shop.getShelfToys().add(lego);
+        shop.getShelfToys().add(robots);
+        shop.getShelfToys().add(dolls);
+
+
+        Raffle raffle = new Raffle(shop);
+
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+        raffle.raffleToys();
+
     }
 }
